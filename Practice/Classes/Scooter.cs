@@ -13,13 +13,16 @@ namespace Practice.Classes
         public override int MaxSpeed { get; set; }
         public override bool IsRented { get; set; }
         public int CountOfWheels { get; set; }
-        public Scooter(string model, string color, int maxspeed, bool isrented, int countofwheels)
+        public override string AdditionalFeature { get; set; }
+
+        public Scooter(string model, string color, int maxspeed, bool isrented, int countofwheels, string additionalFeature)
         {
             Model = model;
             Color = color;
             MaxSpeed = maxspeed;
             IsRented = isrented;
             CountOfWheels = countofwheels;
+            AdditionalFeature = additionalFeature;
         }
         public override void PrintInfo()
         {

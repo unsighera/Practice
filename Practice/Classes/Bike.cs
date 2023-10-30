@@ -15,8 +15,10 @@ namespace Practice.Classes
         public string Category { get; set; }
         public int CountOfWheels { get; set; }
         public  string Motor { get; set; }
+        public override string AdditionalFeature { get; set; }
 
-        public Bike(string model, string color, int maxspeed, bool isrented, string category, int countofwheels, string motor)
+
+        public Bike(string model, string color, int maxspeed, bool isrented, string category, int countofwheels, string motor, string additionalfeature)
         {
             Model = model;
             Color = color;
@@ -25,6 +27,7 @@ namespace Practice.Classes
             Category = category;
             CountOfWheels = countofwheels;
             Motor = motor;
+            AdditionalFeature = additionalfeature;
         }
         public override void PrintInfo()
         {

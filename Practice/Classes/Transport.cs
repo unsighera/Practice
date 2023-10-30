@@ -15,6 +15,7 @@ namespace Practice.Classes
         public abstract bool IsRented { get; set; }
         public int CountOfWheels { get; set; }
         public string Motor { get; set; }
+        public virtual string AdditionalFeature { get; set; }
         public abstract void PrintInfo();
 
         public virtual void CompareSpeeds(List<Transport> transports)
