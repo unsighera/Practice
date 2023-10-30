@@ -26,7 +26,7 @@ namespace Practice.Classes
         }
         public override void PrintInfo()
         {
-            Console.WriteLine($"Boat - Model: {Model}, Color: {Color}, Max Speed: {MaxSpeed}, Is Rented: {IsRented},  Motor: {Motor}");
+            Console.WriteLine($"Boat - Model: {Model}, Color: {Color}, Max Speed: {MaxSpeed}, Is Rented: {IsRented},  Motor: {Motor}, Additional Feature: {AdditionalFeature}");
         }
     }
 }

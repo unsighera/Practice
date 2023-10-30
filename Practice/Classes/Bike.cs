@@ -31,7 +31,7 @@ namespace Practice.Classes
         }
         public override void PrintInfo()
         {
-            Console.WriteLine($"Bike - Model: {Model}, Color: {Color}, Max Speed: {MaxSpeed}, Category: {Category}, Is Rented: {IsRented}, Count of Wheels: {CountOfWheels}, Motor: {Motor}");
+            Console.WriteLine($"Bike - Model: {Model}, Color: {Color}, Max Speed: {MaxSpeed}, Category: {Category}, Is Rented: {IsRented}, Count of Wheels: {CountOfWheels}, Motor: {Motor}, Additional Feature: {AdditionalFeature}");
         }
     }
 }

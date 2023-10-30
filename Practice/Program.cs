@@ -29,10 +29,42 @@ transports.Add(scooter1);
 transports.Add(scooter2);
 Console.WriteLine("List of all transports:");
 Console.WriteLine("If u want to see the speeds, just write 'Show me speeds'");
+Console.WriteLine("Also u can check for rent any transport in list, for that u ought to write 'Check for rented or not'");
+Console.WriteLine("");
 
-foreach (var transport in transports)
+Console.WriteLine("Boats:");
+foreach (var boat in transports.OfType<Boat>())
 {
-    transport.PrintInfo();
+    boat.PrintInfo();
+    Console.WriteLine();
+}
+
+Console.WriteLine("Cars:");
+foreach (var car in transports.OfType<Car>())
+{
+    car.PrintInfo();
+    Console.WriteLine();
+}
+
+Console.WriteLine("Bicycles:");
+foreach (var bicycle in transports.OfType<Bicycle>())
+{
+    bicycle.PrintInfo();
+    Console.WriteLine();
+}
+
+Console.WriteLine("Bikes:");
+foreach (var bike in transports.OfType<Bike>())
+{
+    bike.PrintInfo();
+    Console.WriteLine();
+}
+
+Console.WriteLine("Scooters:");
+foreach (var scooter in transports.OfType<Scooter>())
+{
+    scooter.PrintInfo();
+    Console.WriteLine();
 }
 
 while (true)
