@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Practice.Classes
 {
     public abstract class Transport
@@ -15,5 +16,15 @@ namespace Practice.Classes
         public int CountOfWheels { get; set; }
         public string Motor { get; set; }
         public abstract void PrintInfo();
+
+        public virtual void CompareSpeeds(List<Transport> transports)
+        {
+            var sortedTransports = transports.OrderByDescending(t => t.MaxSpeed);
+            Console.WriteLine("Transports sorted by speed (descending order):");
+            foreach (var transport in sortedTransports)
+            {
+                Console.WriteLine($"Model: {transport.Model}, Max Speed: {transport.MaxSpeed}");
+            }
+        }
     }
 }

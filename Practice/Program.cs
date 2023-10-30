@@ -28,6 +28,7 @@ transports.Add(bike2);
 transports.Add(scooter1);
 transports.Add(scooter2);
 Console.WriteLine("List of all transports:");
+
 foreach (var transport in transports)
 {
     transport.PrintInfo();
