@@ -35,15 +35,45 @@ foreach (var transport in transports)
     transport.PrintInfo();
 }
 
-
 while (true)
 {
-    if (Console.ReadLine() == "Show me speeds")
+    string input = Console.ReadLine();
+    if (input == "Show me speeds")
     {
         foreach (var transport in transports)
         {
             transport.CompareSpeeds(transports);
         }
     }
+    else if(input == "Check for rented or not")
+    {
+        SelectTransport(transports);
+    }
 }
+
+void SelectTransport(List<Transport> transports)
+{
+    Console.WriteLine("Select a transport by entering its index:");
+    for (int i = 0; i < transports.Count; i++)
+    {
+        Console.WriteLine($"{i + 1}. {transports[i].Model}");
+    }
+
+    int selectedIndex;
+    while (true)
+    {
+        if (int.TryParse(Console.ReadLine(), out selectedIndex) && selectedIndex > 0 && selectedIndex <= transports.Count)
+        {
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a valid index.");
+        }
+    }
+
+    Console.WriteLine($"You selected: {transports[selectedIndex - 1].Model}");
+    transports[selectedIndex - 1].CheckRentalStatus();
+}
+
 

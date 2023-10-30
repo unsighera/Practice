@@ -27,5 +27,16 @@ namespace Practice.Classes
                 Console.WriteLine($"Model: {transport.Model}, Max Speed: {transport.MaxSpeed}");
             }
         }
+        public virtual void CheckRentalStatus()
+        {
+            if (IsRented)
+            {
+                Console.WriteLine($"The {Model} is currently rented.");
+            }
+            else
+            {
+                Console.WriteLine($"The {Model} is currently not rented.");
+            }
+        }
     }
 }
