@@ -28,13 +28,22 @@ transports.Add(bike2);
 transports.Add(scooter1);
 transports.Add(scooter2);
 Console.WriteLine("List of all transports:");
+Console.WriteLine("If u want to see the speeds, just write 'Show me speeds'");
 
 foreach (var transport in transports)
 {
     transport.PrintInfo();
 }
 
-foreach (var transport in transports)
+
+while (true)
 {
-    transport.CompareSpeeds(transports);
+    if (Console.ReadLine() == "Show me speeds")
+    {
+        foreach (var transport in transports)
+        {
+            transport.CompareSpeeds(transports);
+        }
+    }
 }
+
