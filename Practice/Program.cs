@@ -33,3 +33,8 @@ foreach (var transport in transports)
 {
     transport.PrintInfo();
 }
+
+foreach (var transport in transports)
+{
+    transport.CompareSpeeds(transports);
+}
