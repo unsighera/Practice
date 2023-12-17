@@ -8,12 +8,12 @@ namespace Practice.Classes
 {
     public class Scooter : Transport
     {
-        public override string Model { get; set; }
-        public override string Color { get; set; }
-        public override int MaxSpeed { get; set; }
-        public override bool IsRented { get; set; }
+        public string Model { get; set; }
+        public string Color { get; set; }
+        public int MaxSpeed { get; set; }
+        public bool IsRented { get; set; }
         public int CountOfWheels { get; set; }
-        public override string AdditionalFeature { get; set; }
+        public string AdditionalFeature { get; set; }
 
         public Scooter(string model, string color, int maxspeed, bool isrented, int countofwheels, string additionalFeature)
         {
@@ -24,7 +24,7 @@ namespace Practice.Classes
             CountOfWheels = countofwheels;
             AdditionalFeature = additionalFeature;
         }
-        public override void PrintInfo()
+        public  void PrintInfo()
         {
             Console.WriteLine($"Scooter - Model: {Model}, Color: {Color}, Max Speed: {MaxSpeed}, Is Rented: {IsRented}, Count of Wheels: {CountOfWheels}, Additional Feature: {AdditionalFeature}");
         }
